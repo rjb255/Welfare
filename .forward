@@ -1,0 +1,10 @@
+# Exim filter
+
+testprint "lps=$local_part_suffix hto=$h_to home = $home"
+
+if $h_to matches rjb255-welfareID[0-9]+@srcf.net then
+	pipe "php /public/home/rjb255/widgets/gym/1welfare/email.php"
+	
+else
+	deliver "rjb255@cam.ac.uk"
+endif
