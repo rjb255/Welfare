@@ -35,13 +35,7 @@
 					$pos++;			
 				}
 				if (preg_match("/^Content-Type: /", $f)){
-					
 					$header = str_replace(array("\n",";"),"",$f) . "\r\n";
-					
-					// while (preg_match("/;\n$/",$f)){
-						// $f = fgets(STDIN);
-						// $header .= $f;
-					// }
 				}
 				break;
 			case 4:
